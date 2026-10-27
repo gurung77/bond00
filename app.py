@@ -1,6 +1,7 @@
 import os
 import streamlit as st
-from tradingagents.graph import create_trading_graph
+from tradingagents.graph.trading_graph import TradingAgentsGraph
+from tradingagents.default_config import DEFAULT_CONFIG
 
 st.set_page_config(page_title="TradingAgents Dashboard", layout="wide")
 st.title("📈 TradingAgents Dashboard")
