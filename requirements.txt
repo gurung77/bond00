@@ -3,4 +3,4 @@ langchain
 yfinance
 setuptools
 wheel
--e git+https://github.com/TauricResearch/TradingAgents.git#egg=tradingagents
+
