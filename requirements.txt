@@ -1,2 +1,2 @@
 streamlit
-tradingagents
+git+https://github.com/TauricResearch/TradingAgents.git
