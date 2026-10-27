@@ -1,2 +1,4 @@
 streamlit
 git+https://github.com/TauricResearch/TradingAgents.git
+langchain
+yfinance
