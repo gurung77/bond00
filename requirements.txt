@@ -1,9 +1,8 @@
 streamlit
-git+https://github.com/TauricResearch/TradingAgents.git
+-e git+https://github.com/TauricResearch/TradingAgents.git#egg=tradingagents
 langchain-openai
 langchain-anthropic
 langchain-google-genai
 langgraph
 pandas
 yfinance
-
