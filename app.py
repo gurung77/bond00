@@ -1,7 +1,5 @@
 import os
 import streamlit as st
-from tradingagents.graph.trading_graph import TradingAgentsGraph
-from tradingagents.default_config import DEFAULT_CONFIG
 
 st.set_page_config(page_title="TradingAgents Dashboard", layout="wide")
 st.title("📈 TradingAgents Dashboard")
@@ -23,6 +21,9 @@ if st.sidebar.button("Run Analysis"):
     if not api_key:
         st.error("Please provide your API key.")
     else:
+        # Import inside the block after environment setup
+        from tradingagents.graph import create_trading_graph
+
         env_var = {
             "OpenAI": "OPENAI_API_KEY",
             "Anthropic": "ANTHROPIC_API_KEY",
@@ -39,9 +40,9 @@ if st.sidebar.button("Run Analysis"):
             "messages": []
         }
 
-        graph = create_trading_graph()
         with st.spinner("Agents are analyzing..."):
             try:
+                graph = create_trading_graph()
                 results = graph.invoke(init_state)
                 st.success("Analysis Complete!")
                 st.subheader("Agent Output & Reports")
